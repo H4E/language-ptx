@@ -1,0 +1,95 @@
+'scopeName': 'source.ptx'
+'name' : 'Nvidia PTX'
+'fileTypes' : ['ptx']
+'macros' :
+  'identifier': '[\\w\\$%][\\w\\$]*'
+# \b is word break
+'patterns' : [
+    {
+      'match': '//.*$'
+      'name' : 'comment.ptx'
+    },
+    {
+      'name' : 'constant.numeric.ptx'
+      'match': '%(clock|laneid|lanemask_gt|(?:pm[0-7])|clock64
+                    |lanemask_eq|nctaid|smid|ctaid|lanemask_le|ntid
+                    |tid|envreg<(?:[1-2][0-9])|(3[01])|[0-9]>\\s|lanemask_lt|nsmid|warpid|gridid
+                    |lanemask_ge|nwarpid|WARP_SZ)'
+    },
+    {
+      'name': ''
+    }
+    {
+    'name' : 'constant.numeric.ptx'
+    'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
+    },
+    {
+      'name': 'entity.name.function.label.ptx'
+      'match': '^\\s*[\\w\\$%][\\w\\$]*:'
+    },
+    {
+      'name':'entity.name.function.type.ptx'
+      'match':'\\.[ufbs](?:2|4|8|(16)|(32)|(64))'
+    },
+    {
+      'name': 'entity.name.function.directive.ptx'
+      'match': '\\.((?:address_size)
+                     |(?:file)
+                     |(?:minnctapersm)
+                     |(?:target)
+                     |(?:align)
+                     |(?:func)
+                     |(?:param)
+                     |(?:tex)
+                     |(?:branchtarget)
+                     |(?:global)
+                     |(?:pragma)
+                     |(?:version)
+                     |(?:callprototype)
+                     |(?:loc)
+                     |(?:reg)
+                     |(?:visible)
+                     |(?:calltargets)
+                     |(?:local)
+                     |(?:reqntid)
+                     |(?:weak)
+                     |(?:const)
+                     |(?:maxnctapersm)
+                     |(?:section)
+                     |(?:entry)
+                     |(?:maxnreg)
+                     |(?:shared)
+                     |(?:extern)
+                     |(?:maxntid)
+                     |(?:sreg)
+                    )'
+    },
+    {
+      'name': 'entity.name.function.ptx'
+      'match': '\\b\\.entry\\s*(\w\w*)\\s*\\('
+      'captures':
+        '1':
+          'name': 'entity.name.function.ptx'
+    },
+    {
+      'name' : 'keyword.mnemonic.ptx'
+      'match': '\\b(abs|div|or|sin|(?:vavrg[24])
+              |add|ex2|pmevent|slct|vmad
+              |addc|exit|popc|sqrt|vmax
+              |and|fma|prefetch|st|(?:vmax[24])
+              |atom|isspacep|prefetchu|sub|vmin
+              |bar|ld|prmt|subc|(?:vmin[24])
+              |bfe|ldu|rcp|suld|vote
+              |bfi|lg2|red|suq|vset
+              |bfind|mad|rem|sured|(?:vset[24])
+              |bra|mad[24]|ret|sust|vshl
+              |brev|madc|rsqrt|testp|vshr
+              |brkpt|max|sad|tex|vsub
+              |call|membar|selp|tld4|(?:vsub[24])
+              |clz|min|set|trap|xor
+              |cnot|mov|setp|txq|copysign|mul|shf|vabsdiff
+              |cos|(?:mul[24])|shfl|(?:vabsdiff[24])
+              |cvta|not|shr|(?:vadd[24])
+              |cvt|neg|shl|vadd)'
+    }
+]
