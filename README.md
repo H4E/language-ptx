@@ -1,4 +1,4 @@
-# NVidia PTX support for Atom
+# language-ptx NVidia PTX support for Atom
 
 Add syntax hightlighting to Nvidia PTX files in Atom
 
@@ -14,5 +14,4 @@ Contributors:
 See the [LICENSE.md][LICENSE] for details.
 
 [LICENSE]: https://github.com/h4e/language-ptx/blob/master/LICENSE.md
-
 
