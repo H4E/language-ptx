@@ -1,19 +1,17 @@
 {
-	  "name": "language-ptx",
-	    "version": "0.0.0",
-	      "description": "Nvidia PTX language support in Atom",
-	        "engines": {
-			    "atom": "*"
-				      },
-		  "dependencies": {},
-		    "repository": {
-			        "type": "git",
-				    "url": "https://github.com/H4E/language-ptx.git"
-					      },
-		      "bugs": {
-			          "url": "https://github.com/H4E/language-ptx/issues"
-					    },
-		        "license": "MIT"
+  "name": "language-ptx",
+  "version": "0.1.0",
+  "description": "Nvidia PTX language support in Atom",
+  "engines": {
+    "atom": "*"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/H4E/language-ptx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/H4E/language-ptx/issues"
+  },
+  "license": "MIT"
 }
-
-
